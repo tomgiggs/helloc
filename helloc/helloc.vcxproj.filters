@@ -27,6 +27,9 @@
     <ClCompile Include="entrance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="customedException.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="input_demo.h">
@@ -35,11 +38,6 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="readme.txt">
-      <Filter>源文件</Filter>
-    </Text>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="helloc.rc">

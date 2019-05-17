@@ -20,6 +20,9 @@ template <typename T> T f2(int &T);
 
 template <typename T, typename V>void f1(T, V);
 
+template<typename Ctype>Ctype f5(Ctype a);
+
+//inline template<typename T>T foo(T, unsigned int*);
 
 class Base
 {
@@ -29,28 +32,48 @@ public:
 class Derived :public Base
 {
 public:
-	void f(char *str)
-	{
-		cout << str;
-	};
-	void f(int x)
-	{
-		cout << x;
-	}
+	void f(char *str);
+	//{
+	//	cout << str;
+	//};
+	void f(int x);
+	//{
+	//	cout << x;
+	//}
 	void Test(void)
 	{
 		Derived *pd = new Derived;
-		char word[] = "10";
+	/*	char word[] = "10";
 
-		pd->f(word);
+		pd->f(word);*/
 		pd->f(20);
 	}
 
 };
 
+class CBase1 {
+public:
+	virtual void Test1() = 0;
+};
+
+class CBase2 {
+public:
+	virtual void Test2() = 0;
+	virtual void Test3() = 0;
+	
+};
+
+class CMD : public CBase1, public CBase2 {
+public:
+	void Test1() { cout << "1111111" << endl; }
+	void Test2() { cout << "2222222" << endl; }
+	void Test3() { cout << "3333333" << endl; }
+};
 
 
-int main()
+
+
+int mainxxxxxx()
 {
 	//const size_t array_size = 10;
 	//int ia[array_size];
@@ -87,10 +110,34 @@ int main()
 	//catch (string err) {
 	//	cout << "run catch string code";
 	//}
+
 	//--------------------
 	//需要在使用之前定义吗，不然会找不到
-	Derived xx;
-	xx.Test();
+	//Derived xx;
+	//xx.Test();
+	//------------------------------
+	//CMD obj;
+	//CBase1 *pBase1 = &obj;
+	//pBase1->Test1();
+	////CBase2 *pBase2 = (CBase2*)pBase1;
+	//CBase2 *pBase2 = &obj;
+	//pBase2->Test2();
+	//pBase2->Test3();
+
+	char name[] = "Jerry";
+	char source[10] ;
+	char dest[8];
+	//source = name;
+	if (source == name)
+	{
+		cout << "source is equal to name";
+	}
+	//strcpy(dest, name);
+	if (strcmp(dest, name) == 0)
+	{
+		cout << "dest is equal to name";
+
+	}
 
 
 	system("pause");
@@ -134,3 +181,27 @@ int main()
 //CMessage::~CMessage()
 //{
 //}
+
+//-----------------
+class Eye
+{
+
+};
+class Nose
+{
+
+};
+class Mouth
+{
+
+};
+class Ear
+{
+
+};
+class Heard :public Eye,public Nose, public Mouth,public Ear
+{
+
+};
+
+
