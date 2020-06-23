@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int mainx()
+int main02()
 {
 	cout << "hello\n";
 	cout << "this is edit by visual studio 2017\n ";

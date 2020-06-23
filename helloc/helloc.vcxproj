@@ -122,6 +122,7 @@
     <ClCompile Include="entrance.cpp" />
     <ClCompile Include="map_demo.cpp" />
     <ClCompile Include="customedException.cpp" />
+    <ClCompile Include="header_define.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="input_demo.h" />
